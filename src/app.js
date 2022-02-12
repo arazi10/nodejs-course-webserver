@@ -3,9 +3,6 @@ const express = require('express')
 const hbs = require('hbs')
 const weather = require('../../weather-app/app')
 
-console.log(__dirname)
-// console.log(path.join( __dirname,'../public'))
-
 const app = express()
 
 // Define paths for Express config
