@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const weather = require('../../weather-app/app')
 
 const app = express()
+const port = process.env.PORT || 3000 // For Heroku if exists otherwise use localy 3000
 
 // Define paths for Express config
 const publicDirPath = path.join(__dirname, '../public')
@@ -74,6 +75,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is started!')
+app.listen(port, () => {
+    console.log('Server is started on port: ' + port)
 })
