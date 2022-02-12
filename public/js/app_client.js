@@ -6,7 +6,7 @@ addEventListener('submit', (e) => {
     e.preventDefault()
     // console.log('Location:' +loaction.value)
 
-    fetch('http://localhost:3000/weather?address=' + address.value).then((response) => {
+    fetch('/weather?address=' + address.value).then((response) => {
         console.log(response)
 
         response.json().then((data) => {

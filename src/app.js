@@ -1,7 +1,7 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
-const weather = require('../../weather-app/app')
+// const weather = require('../../weather-app/app')
 
 const app = express()
 const port = process.env.PORT || 3000 // For Heroku if exists otherwise use localy 3000
@@ -43,6 +43,7 @@ app.get('/help', (req, res) => {
 
 app.get('/weather', (req, res) => {
     const address = req.query.address
+    return res.send(req.query.address)
     if (!address) {
         res.send('You must supply an address!')
         return
