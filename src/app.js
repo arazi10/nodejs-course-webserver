@@ -1,7 +1,7 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
-const weather = require('../../weather-app/app')
+const weather = require('utils/weather')
 
 const app = express()
 const port = process.env.PORT || 3000 // For Heroku if exists otherwise use localy 3000
